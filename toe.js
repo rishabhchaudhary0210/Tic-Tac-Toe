@@ -62,6 +62,7 @@ function handleClick(){
     boxText.innerText=turn;
     checkWin();
     turn = changeTurn();
+    this.style.pointerEvents='none';
     if(isgameOver==false){
         document.getElementsByClassName("info")[0].innerHTML="Turn for " + turn ;
         if(count == 9){
