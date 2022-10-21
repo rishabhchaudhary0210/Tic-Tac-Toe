@@ -37,6 +37,9 @@ function checkWin(){
             line.style.width="30vw";
             line.style.transform = `translate(${e[3]}vw,${e[4]}vw) rotate(${e[5]}deg)`;
             document.getElementById("reset").innerHTML = "Play Again";
+            for(var i=0;i<box.length;i++){
+                document.querySelectorAll(".box")[i].style.pointerEvents='none';
+            }
         }
     });
 }
@@ -66,7 +69,9 @@ function handleClick(){
             gameOver.play();
             document.getElementsByClassName("gameInfo")[0].style.width="36vw";
             document.getElementById("reset").innerHTML = "Play Again";
-            
+            for(var i=0;i<box.length;i++){
+                document.querySelectorAll(".box")[i].style.pointerEvents='none';
+            }
         }
     }
 }
